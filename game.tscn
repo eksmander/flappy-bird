@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://bbe0b7mbwbkq2"]
+
+[ext_resource type="Script" path="res://flap.gd" id="1_w1e67"]
+[ext_resource type="Texture2D" uid="uid://d0l432kxfd3s3" path="res://icon.svg" id="2_ycq16"]
+[ext_resource type="PackedScene" uid="uid://dr5j6bo664hl7" path="res://wall.tscn" id="3_etwky"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n4gyo"]
+size = Vector2(68, 74)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+position = Vector2(354, 203)
+script = ExtResource("1_w1e67")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_n4gyo")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+position = Vector2(3, 3)
+scale = Vector2(0.601562, 0.695312)
+texture = ExtResource("2_ycq16")
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+
+[node name="Node2D" parent="." instance=ExtResource("3_etwky")]
+position = Vector2(528, -1)
+
+[node name="Node2D2" parent="." instance=ExtResource("3_etwky")]
+position = Vector2(1056, -2)
