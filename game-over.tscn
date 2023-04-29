@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=3 uid="uid://c30u7glb14kfv"]
+
+[ext_resource type="Script" path="res://game-over.gd" id="1_igsjc"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_igsjc")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 424.0
+offset_top = 157.0
+offset_right = 527.0
+offset_bottom = 219.0
+text = "game over"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="."]
+offset_left = 427.0
+offset_top = 212.0
+offset_right = 519.0
+offset_bottom = 270.0
+text = "retry"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
