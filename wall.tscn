@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://dr5j6bo664hl7"]
+[gd_scene load_steps=4 format=3 uid="uid://dr5j6bo664hl7"]
 
 [ext_resource type="Texture2D" uid="uid://d0l432kxfd3s3" path="res://icon.svg" id="1_j6e77"]
+[ext_resource type="Script" path="res://hit.gd" id="1_wxnw3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c6s1k"]
 size = Vector2(49, 207)
@@ -9,6 +10,7 @@ size = Vector2(49, 207)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(100, 100)
+script = ExtResource("1_wxnw3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(-2, 0)

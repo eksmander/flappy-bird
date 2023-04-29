@@ -10,3 +10,9 @@ func _process(delta):
 	position += velocity * delta
 	rotation = velocity.angle()
 	move_and_slide()
+
+	for index in get_slide_collision_count():
+		var collision = get_slide_collision(index)
+
+	if collision.collider is StaticBody2D:  
+		get_tree().change_scene_to_file("res://game-over.tscn")
